@@ -9,7 +9,9 @@
 \usepackage{setspace}
 \usepackage{ascmac}
 \usepackage{here}
-
+%%シングルクォート対応
+\usepackage{upquote,textcomp}
+\xspcode`'=0
 % listings
 \usepackage{listings,jlisting}
 \definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
@@ -18,10 +20,15 @@
 \definecolor{Brown}{cmyk}{0,0.81,1,0.60}
 \definecolor{colID}{rgb}{0.63,0.44,0}
 
+\lstloadlanguages{Ruby}
 \lstset{
-language=C,%プログラミング言語によって変える。
-basicstyle={\ttfamily\small},
-commentstyle={\ttfamily\small},
+language=Ruby,%プログラミング言語によって変える。
+basicstyle=\small\ttfamily\color{black},
+commentstyle = \small\ttfamily\color{orange},
+keywordstyle=\small\bfseries\color{blue},
+stringstyle=\small\color{Brown},
+morecomment=[f][\color{red}]-,
+morecomment=[f][\color{OliveGreen}]+,
 tabsize=2,
 frame=single,
 numbers=none,
